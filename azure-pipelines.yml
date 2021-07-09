@@ -1,4 +1,11 @@
-
+- task: Prisma Cloud IaC Scan@3
+  inputs:
+    Path: '.'
+    prismaCloudService: 'PrismaIAC'
+    High: '1'
+    Medium: '1'
+    Low: '1'
+    Operator: 'or'
 trigger:
 - main
 
@@ -57,12 +64,12 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         #tags: latest
 
-    - task: Prisma Cloud IaC Scan@3
-      inputs:
-        Path: 'deploy.yaml'
-        prismaCloudService: 'PrismaIAC'
-        High: '1'
-        Medium: '1'
-        Low: '1'
-        Operator: 'or'
-        Tags: 'env: demo'
+   # - task: Prisma Cloud IaC Scan@3
+   #   inputs:
+   #     Path: 'deploy.yaml'
+   #     prismaCloudService: 'PrismaIAC'
+  #    High: '1'
+    #    Medium: '1'
+    #    Low: '1'
+     #   Operator: 'or'
+      #  Tags: 'env: demo'
