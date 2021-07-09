@@ -61,7 +61,7 @@ stages:
       inputs:
         Path: 'deploy.yaml'
         prismaCloudService: 'PrismaIAC'
-      High: '1'
+        High: '1'
         Medium: '1'
         Low: '1'
         Operator: 'or'
